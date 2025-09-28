@@ -287,7 +287,7 @@ nav ul li a:hover {
 
   <!-- Navbar -->
   <nav>
-  <a href="#" class="logo">YourLogo</a>
+  <a href="#" class="logo">Amaconsi Supplies & Construction</a>
 
   <!-- Hamburger Icon -->
   <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -301,28 +301,30 @@ nav ul li a:hover {
 </nav>
 
 
-  <!-- Hero Section -->
-  <header>
-    <h1>Renovation Experts at Your Service! 🏠🔧</h1>
-    <p>Professional, reliable, and affordable home renovation services.</p>
-    <a href="#services" class="btn btn-orange">View Services</a>
-    <a href="#footer-contact" class="btn btn-dark">Contact Us</a>
-  </header>
 
-  <!-- Our Work Section -->
-  <section id="gallery">
-    <div class="container">
-      <h2 style="color:var(--safety-yellow)">Our Work</h2>
-      <div class="gallery">
-        <img src="https://www.mskconstruct.co.za/wp-content/uploads/2022/04/Painting-Services-1024x675.jpg" alt="Painting Project 1">
-        <img src="https://fantastichandyman.com.au/blog/wp-content/uploads/2021/03/tiling_over_tiles.jpg" alt="Tiling Project 2">
-        <img src="https://interiorexteriorworks.in/wp-content/uploads/2022/04/plumbing-work-in-omr-kelambakkam-770x361.jpg" alt="Plumbing Project 3">
-        <img src="https://hamiltonconcretecompany.co.nz/wp-content/uploads/2024/08/paving-service-nz-11-1024x683.jpg" alt="Paving Project 4">
-                <img src="https://www.juspropa.com/za/shop/wp-content/uploads/2024/03/Electrician-Installation-of-Plugs-and-light-switches.jpg" alt="Plug installation Project 4">
-        <img src="https://www.buildit.co.za/getattachment/5a31e2dd-6a78-454a-9724-fa2fc13db65b/Mastering-Plastering-Tips-for-Interior-and-Exteri.aspx" alt="Plastering Project 4">
-      </div>
+  <!-- Hero Section -->
+<header id="home">
+  <h1>Renovation Experts at Your Service! 🏠🔧</h1>
+  <p>Professional, reliable, and affordable home renovation services.</p>
+  <a href="#services" class="btn btn-orange">View Services</a>
+  <a href="#footer-contact" class="btn btn-dark">Contact Us</a>
+</header>
+
+<!-- Our Work Section -->
+<section id="about">
+  <div class="container">
+    <h2 style="color:var(--safety-yellow)">Our Work</h2>
+    <div class="gallery">
+      <img src="https://www.mskconstruct.co.za/wp-content/uploads/2022/04/Painting-Services-1024x675.jpg" alt="Painting Project 1">
+      <img src="https://fantastichandyman.com.au/blog/wp-content/uploads/2021/03/tiling_over_tiles.jpg" alt="Tiling Project 2">
+      <img src="https://interiorexteriorworks.in/wp-content/uploads/2022/04/plumbing-work-in-omr-kelambakkam-770x361.jpg" alt="Plumbing Project 3">
+      <img src="https://hamiltonconcretecompany.co.nz/wp-content/uploads/2024/08/paving-service-nz-11-1024x683.jpg" alt="Paving Project 4">
+      <img src="https://www.juspropa.com/za/shop/wp-content/uploads/2024/03/Electrician-Installation-of-Plugs-and-light-switches.jpg" alt="Plug installation Project 5">
+      <img src="https://www.buildit.co.za/getattachment/5a31e2dd-6a78-454a-9724-fa2fc13db65b/Mastering-Plastering-Tips-for-Interior-and-Exteri.aspx" alt="Plastering Project 6">
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Our Services Section -->
   <section id="services">
@@ -395,14 +397,23 @@ nav ul li a:hover {
     <p>© 2025 Amaconsi Supplies & Construction. All rights reserved.</p>
   </footer>
 
-  <script>
+<script>
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
 
+  // Toggle menu open/close
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
   });
+
+  // Close menu when clicking a link
+  document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+    });
+  });
 </script>
+
 
 </body>
 </html>
